@@ -22,17 +22,44 @@
   <div class="container">
     <div class="row justify-content-md-center">
       <div class="col-6">
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="roadTracks" name="roadTracks" checked>
+          <label class="form-check-label" for="roadTracks">Road tracks</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="ovalTracks" name="ovalTracks" checked>
+          <label class="form-check-label" for="ovalTracks">Oval tracks</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="roadCars" name="roadCars" checked>
+          <label class="form-check-label" for="roadCars">Road cars</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="ovalCars" name="ovalCars" checked>
+          <label class="form-check-label" for="ovalCars">Oval cars</label>
+        </div>
         <button type="button" class="btn btn-primary btn-lg" onclick="randomCombo()">
           Generate a random combo !
         </button>
-        <button type="button" class="btn btn-primary btn-lg" onclick="multiclassCombo()">
-          Generate a multiclass combo !
+        <button type="button" class="btn btn-primary btn-lg" onclick="addCar()" id="addCar" hidden="true">
+          Add another car !
         </button>
-        <ul class="list-group">
-          <li class="list-group-item"><b id="track"></b></li>
-          <li class="list-group-item"><b id="car"></b></li>
-          <li class="list-group-item"><b id="timeOfDay"></b></li>
-        </ul>
+        <div class="card">
+          <div class="card-body" id="track">
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <ul class="list-group list-group-flush" id="car">
+              
+            </ul>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body" id="timeOfDay">
+
+          </div>
+        </div>
       </div>
     </div>
   </div>
