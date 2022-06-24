@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+    <script type="text/javascript" src="strategy.js"></script>
+    <title>iRacing strategy</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-4">
+                <label for="laps" class="form-label">Race length</label>
+                <input type="text" class="form-control" id="length">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="raceLaps"
+                        onclick="switchLeaderPaceInputVisibility()" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        Laps
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="raceMinutes"
+                        onclick="switchLeaderPaceInputVisibility()">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        Minutes
+                    </label>
+                </div>
+                <div id="timedRace" hidden="true">
+                    <b>Leader's pace</b>
+
+                    <label for="minutes" class="form-label">Minutes</label>
+                    <input type="number" class="form-control" id="minutes" name="minutes" min="0" max="15">
+
+                    <label for="seconds" class="form-label">Seconds</label>
+                    <input type="number" class="form-control" id="seconds" name="seconds" min="0" max="60">
+                </div>
+
+
+                <label for="fuelperlap" class="form-label">Fuel per lap</label>
+                <input type="text" class="form-control" id="fuelperlap">
+                <button type="button" class="btn btn-primary btn-lg" onclick="doStrategy()">
+                    Calculate
+                </button>
+                <p id="result"></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
